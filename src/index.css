@@ -1,0 +1,130 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom color palette for elegant pinkish theme */
+@layer base {
+  :root {
+    /* Elegant pinkish palette */
+    --rose-50: 255 241 242;
+    --rose-100: 255 228 230;
+    --rose-200: 254 205 211;
+    --rose-300: 253 164 175;
+    --rose-400: 251 113 133;
+    --rose-500: 244 63 94;
+    --rose-600: 225 29 72;
+    --rose-700: 190 18 60;
+    --rose-800: 159 18 57;
+    --rose-900: 136 19 55;
+    
+    /* Neutral grays */
+    --gray-50: 249 250 251;
+    --gray-100: 243 244 246;
+    --gray-200: 229 231 235;
+    --gray-300: 209 213 219;
+    --gray-400: 156 163 175;
+    --gray-500: 107 114 128;
+    --gray-600: 75 85 99;
+    --gray-700: 55 65 81;
+    --gray-800: 31 41 55;
+    --gray-900: 17 24 39;
+
+    --background: 0 0% 100%;
+    --foreground: var(--gray-900);
+    --card: 0 0% 100%;
+    --card-foreground: var(--gray-900);
+    --popover: 0 0% 100%;
+    --popover-foreground: var(--gray-900);
+    --primary: var(--rose-500);
+    --primary-foreground: 210 40% 98%;
+    --secondary: var(--rose-50);
+    --secondary-foreground: var(--rose-900);
+    --muted: var(--gray-100);
+    --muted-foreground: var(--gray-600);
+    --accent: var(--rose-100);
+    --accent-foreground: var(--rose-800);
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: var(--gray-200);
+    --input: var(--gray-200);
+    --ring: var(--rose-500);
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: var(--gray-900);
+    --foreground: var(--gray-50);
+    --card: var(--gray-800);
+    --card-foreground: var(--gray-50);
+    --popover: var(--gray-800);
+    --popover-foreground: var(--gray-50);
+    --primary: var(--rose-400);
+    --primary-foreground: var(--gray-900);
+    --secondary: var(--gray-800);
+    --secondary-foreground: var(--gray-200);
+    --muted: var(--gray-800);
+    --muted-foreground: var(--gray-400);
+    --accent: var(--gray-700);
+    --accent-foreground: var(--gray-200);
+    --border: var(--gray-700);
+    --input: var(--gray-700);
+    --ring: var(--rose-400);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(244, 63, 94, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(244, 63, 94, 0.6); }
+}
+
+@keyframes dance {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  25% { transform: rotate(2deg) scale(1.05); }
+  50% { transform: rotate(0deg) scale(1.1); }
+  75% { transform: rotate(-2deg) scale(1.05); }
+}
+
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+.pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.dance-hover:hover {
+  animation: dance 0.6s ease-in-out;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom gradients */
+.gradient-rose {
+  background: linear-gradient(135deg, rgb(255, 241, 242) 0%, rgb(254, 205, 211) 50%, rgb(253, 164, 175) 100%);
+}
+
+.gradient-text-rose {
+  background: linear-gradient(135deg, rgb(244, 63, 94), rgb(225, 29, 72));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
