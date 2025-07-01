@@ -20,8 +20,7 @@ const Projects = () => {
       tags: ['Laravel', 'JavaScript', 'PostgreSQL'],
       category: 'fullstack',
       image: '/makassarhandicraft.png',
-      githubUrl: '#',
-      liveUrl: '#'
+      liveUrl: 'https://mhc.tannamas.id/'
     }
   ];
 
