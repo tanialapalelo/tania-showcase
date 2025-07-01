@@ -8,7 +8,7 @@ const Projects = () => {
   const projects = [
     {
       title: 'Clariti Property',
-      description: 'Full-stack e-commerce solution with React, Next.js, and integrated payment processing.',
+      description: 'A full-featured real estate platform for property listings and inquiries, built with modern technologies like Next.js and WordPress. Enables easy content management and seamless UI.',
       tags: ['Next.js', 'Headless Wordpress', 'TypeScript', 'Tailwind'],
       category: 'fullstack',
       image: '/clariti.png',
@@ -16,8 +16,8 @@ const Projects = () => {
     },
     {
       title: 'Makassar Handicraft',
-      description: 'Collaborative task management tool with real-time updates and team features.',
-      tags: ['Laravel', 'JavaScript', 'PostgreSQL'],
+      description: 'A landing page to showcase handcrafted jewelry from Makassar artisans. Built to highlight products with elegant visuals and responsive design, supporting local craftsmanship through a clean and accessible web presence.',
+      tags: ['Laravel', 'JavaScript', 'PostgreSQL', 'AdminJs'],
       category: 'fullstack',
       image: '/makassarhandicraft.png',
       liveUrl: 'https://mhc.tannamas.id/'
